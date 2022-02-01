@@ -1,0 +1,72 @@
+Q1. Write a program to create a room class, the attributes of this class is roomno, roomtype, roomarea 
+and ACmachine. In this class, the member functions are setdata and displaydata
+
+class Room {
+   int roomNo;
+   String roomType;
+   float roomArea;
+   boolean acMachine;
+
+   void setData(int rno, String rt, float area, boolean ac) {
+       roomNo = rno;
+       roomType = rt;
+       roomArea = area;
+       acMachine = ac;
+    }
+
+    void displayData() {
+       System.out.println(“The room#.Is” + roomNo);
+       System.out.println(“The room Type is” + roomType);
+       System.out.println(“The room area is” + roomArea);
+       String s = (acMachine) ? “yes” : “no”;
+       System.out.println(“The A / c Machine needed” + s);
+    }
+
+    public static void main(String arg[]) {
+       Room room1 = new Room();
+       room1.setData(101, “Deluxe”, 240.0 f, true);
+       room1.displayData();
+    }
+}
+
+Q 2. Write a program to print a string characters at odd index position from a given string
+
+import java.util.*;
+class txt{
+    public static void main(String args[]){
+        string s;
+        Scanneer sc=new scanner(System.in);
+        System.out.println("Enter your string");
+        s=sc.nextline();
+        int l=sc.length();
+        string s1="";
+        for(int i=0;i<l;i++){
+            if(i%2==1){//string character is at odd index.
+               s1=s1+s.charAt(i);
+            }
+        }
+        system.out.println(s1);
+    }
+}
+
+Q:3. Write a program that reads a source file and writes out the names of files #included.
+Indent file names to show files #included by included files
+
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namepsace std;
+
+int main(void)
+{
+    ifstream file; 
+    file.open("document.txt");
+
+   for (string s; getline(filein, s); ) 
+    {
+        auto it = s.find("#include")
+        if ( it != string::npos)
+            cout << s << endl;
+    }
+}
